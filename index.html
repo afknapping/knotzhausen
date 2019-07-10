@@ -1,1 +1,15 @@
-<h1>Welcome to Knotzhausen</h1>
+<h1 id="headline">Welcome to Knotzhausen</h1>
+
+<script>
+    document.querySelector("h1").textContent += " for programming";
+
+    document.addEventListener('keydown', logKey);
+
+    function logKey(e) {
+        console.log(e.code)
+        document.querySelector("h1").textContent = e.code
+        if (e.code == 'Escape') {
+            nw.App.closeAllWindows();
+        }
+    }
+</script>
