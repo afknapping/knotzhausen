@@ -1,15 +1,24 @@
 <h1 id="headline">Welcome to Knotzhausen</h1>
 
-<script>
-    document.querySelector("h1").textContent += " for programming";
+<p>Keycode: <span id="keycode"></span></p>
 
+<script>
     document.addEventListener('keydown', logKey);
 
     function logKey(e) {
         console.log(e.code)
-        document.querySelector("h1").textContent = e.code
+        document.querySelector("#keycode").textContent = e.code
         if (e.code == 'Escape') {
             nw.App.closeAllWindows();
         }
     }
 </script>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: fuchsia;
+        width: 320px;
+        height: 240px;
+    }
+</style>
