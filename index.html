@@ -9,7 +9,7 @@
         console.log(e.code)
         document.querySelector("#keycode").textContent = e.code
         if (e.code == 'Escape') {
-            document.querySelector("#keycode").textContent = "Buy, bye..."
+            document.querySelector("#keycode").textContent = "Bye, bye..."
             setTimeout(function() {
                 nw.App.closeAllWindows();
             }, 2000)
